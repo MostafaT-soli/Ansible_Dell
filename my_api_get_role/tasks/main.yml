@@ -1,0 +1,17 @@
+---
+- name: Perform a GET request to the API and store the response
+  block:
+    - name: RI request
+      ansible.builtin.uri:
+        url: "{{ api_url }}"
+        method: "{{ api_method }}"
+      register: api_response
+      failed_when: api_response.status != 200
+  rescue:
+    - name: Handle API request failure
+      ansible.builtin.debug:
+        msg: "API request failed, performing recovery actions here..."
+
+- name: Debug API response
+  ansible.builtin.debug:
+    var: api_response

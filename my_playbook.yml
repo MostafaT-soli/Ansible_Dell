@@ -1,0 +1,6 @@
+# my_playbook.yml
+---
+- name: Example playbook to use my_api_get_role
+  hosts: localhost
+  roles:
+    - my_api_get_role

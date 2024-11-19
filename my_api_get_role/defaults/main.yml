@@ -1,0 +1,3 @@
+---
+# defaults/main.yml
+api_url: "http://4.174.201.163/users"

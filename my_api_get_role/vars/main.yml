@@ -1,0 +1,4 @@
+---
+# vars file for Ansible_Dell
+# vars/main.yml
+api_method: "GET"
