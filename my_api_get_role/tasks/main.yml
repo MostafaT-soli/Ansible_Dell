@@ -1,7 +1,7 @@
 ---
 - name: Perform a GET request to the API and store the response
   block:
-    - name: RI request
+    - name: URI request
       ansible.builtin.uri:
         url: "{{ api_url }}"
         method: "{{ api_method }}"
